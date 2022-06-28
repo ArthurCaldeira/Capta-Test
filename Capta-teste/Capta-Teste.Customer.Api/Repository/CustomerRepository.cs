@@ -60,7 +60,7 @@ namespace Capta_Teste.Customer.Api.Repository
 
         public async Task<bool> Delete(long id)
         {
-            var customer = await _context.Customers.Where(x => x.Id.Equals(id)).FirstOrDefaultAsync();
+            var customer = await _context.Customers.Where(x => x.Id == id).FirstOrDefaultAsync();
 
             if (customer == null) return false;
 
